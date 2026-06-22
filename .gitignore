@@ -11,5 +11,6 @@
 !docs/06_Gestion_Projet.md
 !docs/07_Note_Direction.md
 
-# Et le .gitignore lui-même
+# Et le .gitignore + README
 !.gitignore
+!README.md
