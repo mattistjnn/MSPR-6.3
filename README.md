@@ -43,14 +43,15 @@ Réseau dédié : `vmbr5` — 192.168.60.0/24 (Management & Réplication)
 | 05 | [RunBook d'Exploitation](docs/05_RunBook_Exploitation.md) | Start/stop, checklists, procédure incident, matrice d'escalade N1/N2/N3, KPIs |
 | 06 | [Gestion de Projet](docs/06_Gestion_Projet.md) | RACI, planning, suivi tâches, registre risques, journal des décisions |
 | 07 | [Note de Direction](docs/07_Note_Direction.md) | Note non-technique comité de direction — risques cyber, impact métier, ROI |
+| 08 | [Technical Summary EN](docs/08_Technical_Summary_EN.md) | English technical summary — architecture, security, backup strategy, key metrics |
 
 ---
 
 ## Équipe
 
-| Personne | Rôle |
-|----------|------|
-| Personne 1 | Architecture & Infrastructure |
-| Personne 2 | Base de données & SQL |
-| Personne 3 | Sécurité & Supervision |
-| Personne 4 | Gestion de projet & Direction |
+| Nom | Rôle |
+|-----|------|
+| Mattis TAJAN | Architecture & Infrastructure |
+| Valentin GORIN | Base de données & SQL |
+| Lucas BADUEL | Sécurité & Supervision |
+| Quentin GRENIER | Gestion de projet & Direction |
