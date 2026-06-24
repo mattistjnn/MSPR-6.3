@@ -10,15 +10,15 @@
 
 | Personne | Rôle | Responsabilités principales |
 |----------|------|----------------------------|
-| **Personne 1** | Architecture & Infrastructure | Choix SGBD, VMs Proxmox, réplication, PRA, RunBook, sauvegardes |
-| **Personne 2** | Base de données & SQL | MCD/MLD, requêtes SQL, optimisation BDD, index, scripts |
-| **Personne 3** | Sécurité & Supervision | Politiques d'accès, durcissement, monitoring, analyse logs |
-| **Personne 4** | Gestion de projet & Direction | Planning, jalons, registre risques, note direction, soutenance |
+| **Mattis TAJAN** | Architecture & Infrastructure | Choix SGBD, VMs Proxmox, réplication, PRA, RunBook, sauvegardes |
+| **Valentin GORIN** | Base de données & SQL | MCD/MLD, requêtes SQL, optimisation BDD, index, scripts |
+| **Lucas BADUEL** | Sécurité & Supervision | Politiques d'accès, durcissement, monitoring, analyse logs |
+| **Quentin GRENIER** | Gestion de projet & Direction | Planning, jalons, registre risques, note direction, soutenance |
 
 ### 1.2 Matrice RACI
 
-| Livrable | P1 | P2 | P3 | P4 |
-|----------|----|----|----|----|
+| Livrable | Mattis | Valentin | Lucas | Quentin |
+|----------|--------|----------|-------|---------|
 | Choix SGBD | **R** | C | I | A |
 | Architecture HA | **R** | I | C | A |
 | MCD/MLD | C | **R** | I | A |
@@ -94,28 +94,28 @@ P4       ████████████
 | ID | Tâche | Responsable | Statut | Commentaire |
 |----|-------|------------|--------|-------------|
 | T01 | Lecture cahier des charges + contexte NTL | Tous | ✅ Terminé | |
-| T02 | Comparatif MySQL vs PostgreSQL | P1 | ✅ Terminé | PostgreSQL 16 retenu |
-| T03 | Création vmbr5 et vmbr6 sur Proxmox | P1 | ✅ Terminé | vmbr5: 192.168.60.0/24 |
-| T04 | Création VM MSPR-DB-01 (Primary) | P1 | ✅ Terminé | pve-node1 |
-| T05 | Création VM MSPR-DB-02 (Replica) | P1 | ✅ Terminé | pve-node2 |
-| T06 | Création VM MSPR-MGT (Monitoring) | P1 | ✅ Terminé | pve-node1 |
-| T07 | Configuration IP fixe + réseau VMs | P1 | ✅ Terminé | Netplan + NAT WireGuard |
-| T08 | Installation PostgreSQL 16 DB-01 | P1 | ✅ Terminé | Depuis pgdg |
-| T09 | Configuration réplication WAL (DB-01→DB-02) | P1 | ✅ Terminé | pg_basebackup + standby |
-| T10 | Validation réplication (pg_stat_replication) | P1 | ✅ Terminé | streaming async OK |
-| T11 | MCD NTL (entités WMS) | P2 | ✅ Terminé | 11 tables |
-| T12 | MLD PostgreSQL (DDL SQL) | P2 | ✅ Terminé | Avec contraintes ACID |
-| T13 | Index et vues matérialisées | P2 | ✅ Terminé | +208x perf stock |
-| T14 | Politique d'accès (rôles PostgreSQL) | P3 | ✅ Terminé | Moindre privilège |
-| T15 | Guide supervision (5 KPIs) | P3 | ✅ Terminé | |
-| T16 | Script backup_full.sh | P1 | ✅ Terminé | Cron 00h00 |
-| T17 | Script test_restore.sh | P1 | ✅ Terminé | Cron samedi 03h00 |
-| T18 | PRA (scénarios + procédures) | P1 | ✅ Terminé | RTO 1h / RPO 15min |
-| T19 | Test failover manuel DB-01→DB-02 | P1, P3 | ✅ Terminé | DB-02 promu Primary 24/06 — DB-01 reconstructe comme Replica |
-| T20 | Document architecture technique complet | P1, P2 | ✅ Terminé | |
-| T21 | RunBook d'exploitation | P1 | ✅ Terminé | |
-| T22 | Note de direction | P4 | ✅ Terminé | |
-| T23 | Présentation soutenance | P4 | 🔄 En cours | |
+| T02 | Comparatif MySQL vs PostgreSQL | Mattis | ✅ Terminé | PostgreSQL 16 retenu |
+| T03 | Création vmbr5 et vmbr6 sur Proxmox | Mattis | ✅ Terminé | vmbr5: 192.168.60.0/24 |
+| T04 | Création VM MSPR-DB-01 (Primary) | Mattis | ✅ Terminé | pve-node1 |
+| T05 | Création VM MSPR-DB-02 (Replica) | Mattis | ✅ Terminé | pve-node2 |
+| T06 | Création VM MSPR-MGT (Monitoring) | Mattis | ✅ Terminé | pve-node1 |
+| T07 | Configuration IP fixe + réseau VMs | Mattis | ✅ Terminé | Netplan + NAT WireGuard |
+| T08 | Installation PostgreSQL 16 DB-01 | Mattis | ✅ Terminé | Depuis pgdg |
+| T09 | Configuration réplication WAL (DB-01→DB-02) | Mattis | ✅ Terminé | pg_basebackup + standby |
+| T10 | Validation réplication (pg_stat_replication) | Mattis | ✅ Terminé | streaming async OK |
+| T11 | MCD NTL (entités WMS) | Valentin | ✅ Terminé | 11 tables |
+| T12 | MLD PostgreSQL (DDL SQL) | Valentin | ✅ Terminé | Avec contraintes ACID |
+| T13 | Index et vues matérialisées | Valentin | ✅ Terminé | +208x perf stock |
+| T14 | Politique d'accès (rôles PostgreSQL) | Lucas | ✅ Terminé | Moindre privilège |
+| T15 | Guide supervision (5 KPIs) | Lucas | ✅ Terminé | |
+| T16 | Script backup_full.sh | Mattis | ✅ Terminé | Cron 00h00 |
+| T17 | Script test_restore.sh | Mattis | ✅ Terminé | Cron samedi 03h00 |
+| T18 | PRA (scénarios + procédures) | Mattis | ✅ Terminé | RTO 1h / RPO 15min |
+| T19 | Test failover manuel DB-01→DB-02 | Mattis, Lucas | ✅ Terminé | DB-02 promu Primary 24/06 — DB-01 reconstruite comme Replica |
+| T20 | Document architecture technique complet | Mattis, Valentin | ✅ Terminé | |
+| T21 | RunBook d'exploitation | Mattis | ✅ Terminé | |
+| T22 | Note de direction | Quentin | ✅ Terminé | |
+| T23 | Présentation soutenance | Quentin | 🔄 En cours | |
 | T24 | Relecture collective + corrections | Tous | ⬜ À faire | Jour 9 |
 
 ---

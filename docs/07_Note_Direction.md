@@ -2,7 +2,7 @@
 ## NordTransit Logistics — Sécurisation de la Base de Données WMS
 **Destinataires :** Direction Générale, DAF, Responsable IT
 **Date :** Juin 2026 | **Classification :** Confidentiel Direction
-**Auteur :** Équipe Projet MSPR — Personne 4 (Gestion de Projet)
+**Auteur :** Équipe Projet MSPR — Quentin GRENIER (Gestion de Projet)
 
 ---
 

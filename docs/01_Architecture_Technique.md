@@ -1,6 +1,6 @@
 # Document d'Architecture Technique
 ## NordTransit Logistics (NTL) — Système WMS PostgreSQL 16
-**Version :** 1.0 | **Date :** Juin 2026 | **Auteur :** Personne 1 — Architecture & Infrastructure
+**Version :** 1.0 | **Date :** Juin 2026 | **Auteur :** Mattis TAJAN — Architecture & Infrastructure
 
 ---
 
