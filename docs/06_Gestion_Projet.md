@@ -47,7 +47,7 @@
 | J4 | VMs créées et configurées (DB-01, DB-02, MGT) | Jour 4 | ✅ Terminé |
 | J5 | Réplication Primary→Replica fonctionnelle | Jour 5 | ✅ Terminé |
 | J6 | Scripts de sauvegarde testés et validés | Jour 6 | ✅ Terminé |
-| J7 | Tests HA (failover manuel validé) | Jour 7 | 🔄 En cours |
+| J7 | Tests HA (failover manuel validé) | Jour 7 | ✅ Terminé |
 | J8 | Documentation complète rédigée | Jour 8–9 | 🔄 En cours |
 | J9 | Relecture + corrections finales | Jour 9 | ⬜ À faire |
 | J10 | Support soutenance finalisé | Jour 10 | ⬜ À faire |
@@ -111,7 +111,7 @@ P4       ████████████
 | T16 | Script backup_full.sh | P1 | ✅ Terminé | Cron 00h00 |
 | T17 | Script test_restore.sh | P1 | ✅ Terminé | Cron samedi 03h00 |
 | T18 | PRA (scénarios + procédures) | P1 | ✅ Terminé | RTO 1h / RPO 15min |
-| T19 | Test failover manuel DB-01→DB-02 | P1, P3 | 🔄 En cours | |
+| T19 | Test failover manuel DB-01→DB-02 | P1, P3 | ✅ Terminé | DB-02 promu Primary 24/06 — DB-01 reconstructe comme Replica |
 | T20 | Document architecture technique complet | P1, P2 | ✅ Terminé | |
 | T21 | RunBook d'exploitation | P1 | ✅ Terminé | |
 | T22 | Note de direction | P4 | ✅ Terminé | |

@@ -113,8 +113,9 @@ sudo -u postgres psql -c "SELECT pg_last_wal_receive_lsn(), pg_last_wal_replay_l
 
 #### Phase 2 — Promotion (5 min)
 ```bash
-# Sur MSPR-DB-02 : promouvoir en Primary
-sudo -u postgres pg_ctl promote -D /var/lib/postgresql/16/main
+# Sur MSPR-DB-02 : promouvoir en Primary (commande Debian/Ubuntu)
+sudo pg_ctlcluster 16 main promote
+sleep 5
 
 # Vérifier la promotion
 sudo -u postgres psql -c "SELECT pg_is_in_recovery();"
@@ -147,7 +148,8 @@ sudo -u postgres pg_basebackup \
   -h 192.168.60.12 \
   -U repuser \
   -D /var/lib/postgresql/16/main \
-  -Pv -W -R
+  -P -R --wal-method=stream
+# Note : max_wal_senders doit être ≥ 10 dans postgresql.conf (DB-01) pour correspondre à DB-02
 
 systemctl start postgresql@16-main
 

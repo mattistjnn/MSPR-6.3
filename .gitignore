@@ -1,8 +1,6 @@
 # Ignorer tout
 *
 
-# Sauf les 7 documents générés
-!docs/
 !docs/01_Architecture_Technique.md
 !docs/02_Plan_Reprise_Activite.md
 !docs/03_Guide_Supervision.md
@@ -10,6 +8,7 @@
 !docs/05_RunBook_Exploitation.md
 !docs/06_Gestion_Projet.md
 !docs/07_Note_Direction.md
+!docs/08_Technical_Summary_EN.md
 
 # Et le .gitignore + README
 !.gitignore
